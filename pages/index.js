@@ -1,8 +1,9 @@
-import { useRef } from "react";
+import Image from "next/image";
 import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
+
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
+import profilePic from '../assets/profile-picture.jpg'
 
 import Footer from "../components/Footer";
 import Head from "next/head";
@@ -48,13 +49,20 @@ export default function Home() {
         />
         <div className="laptop:mt-20 mt-10">
         <div>
-          <div className="mt-5 flex">
-            <h1
-              
-              className="text-3xl"
-            >
-             Alexander Leino
-            </h1>
+          <div className="mt-5 flex space-x-20 items-center">
+            <Image src={profilePic} width={"275"} height={"275"} style={{borderRadius: '50%'}}/>
+            <div>
+              <h1  
+                className="text-5xl"
+              >
+              Alexander Leino
+              </h1>
+              <div>
+                React Developer with nine months of professional experience looking for their next opportunity
+              </div>
+              <Socials />
+            </div>
+
         </div>
             <h1
             
@@ -63,7 +71,7 @@ export default function Home() {
             </h1>
           </div>
 
-          <Socials className="mt-2 laptop:mt-5" />
+         
         </div>
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
           <h1 className="text-2xl text-bold">Projects</h1>
@@ -83,15 +91,7 @@ export default function Home() {
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
           <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
+          
         </div>
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
           <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
