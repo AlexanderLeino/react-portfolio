@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-const ProjectCard = ({ img, name, description, onClick }) => {
+const ProjectCard = ({ img, name, description, technologies, onClick }) => {
   return (
+  <>
     <div
       className="overflow-hidden rounded-lg link"
       onClick={onClick}
@@ -19,12 +20,24 @@ const ProjectCard = ({ img, name, description, onClick }) => {
         />
       </div>
       <h1 className="mt-5 text-3xl font-medium">
-        {name ? name : "Project Name"}
+        {name}
       </h1>
       <h2 className="text-xl opacity-50">
-        {description ? description : "Description"}
+        {description}
       </h2>
+    <div>
+      Technologies:
+      <div className="flex">
+        {technologies.map((value) =>{
+          return <div className="p-3 m-1 border-2 border-white border-solid">{value}</div>
+        })}
+      </div>
+      <div>
     </div>
+
+      </div>
+    </div>
+  </>
   );
 };
 
