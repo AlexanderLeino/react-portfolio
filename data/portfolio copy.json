@@ -1,7 +1,7 @@
 {
   "name": "Chetan",
   "headerTaglineOne": "Hello 👋",
-  "headerTaglineTwo": "I'm Chetan Verma - curious",
+  "headerTaglineTwo": "",
   "headerTaglineThree": "designer and devloper",
   "headerTaglineFour": " based in New Delhi, India.",
   "showBlog": true,
@@ -28,9 +28,9 @@
   "projects": [
     {
       "id": "1",
-      "title": "Project One Test",
+      "title": "Netflix and Grill",
       "description": "Web Design",
-      "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "imageSrc": "",
       "url": "http://chetanverma.com/"
     },
     {

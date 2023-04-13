@@ -1,10 +1,6 @@
 import React from "react";
-import { useTheme } from "next-themes";
 
 const Button = ({ children, type, onClick, classes }) => {
-
-  const { theme } = useTheme();
-  console.log(theme)
   if (type === "nav") {
     return (
       <button

@@ -11,7 +11,7 @@ const Footer = ({}) => {
       
           <div className="mt-10">
             <h1 className="text-3xl tablet:text-7xl laptop:text-7xl laptopl:text-7xl text-bold">
-              LET&apos;S Connect
+              Let&apos;s Connect
             </h1>
            
             <a href="https://calendly.com/alexander-leino/30min">

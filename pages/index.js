@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Header from "../components/Header";
-
+import {ProjectData} from '../data/projectData'
 import Socials from "../components/Socials";
-import WorkCard from "../components/WorkCard";
+import ProjectCard from "../components/ProjectCard";
 import profilePic from '../assets/profile-picture.jpg'
 
 import Footer from "../components/Footer";
@@ -13,25 +13,6 @@ import Head from "next/head";
 import data from "../data/portfolio.json";
 
 export default function Home() {
-
-  const handleWorkScroll = () => {
-    window.scrollTo({
-      top: workRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
-  const handleAboutScroll = () => {
-    window.scrollTo({
-      top: aboutRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
- 
-
   return (
     <div>
 
@@ -43,13 +24,11 @@ export default function Home() {
       <div className="gradient-circle-bottom"></div>
 
       <div className="container mx-auto mb-10">
-        <Header
-          handleWorkScroll={handleWorkScroll}
-          handleAboutScroll={handleAboutScroll}
-        />
+      <Header />
         <div className="laptop:mt-20 mt-10">
         <div>
           <div className="mt-5 flex space-x-20 items-center">
+            
             <Image src={profilePic} width={"275"} height={"275"} style={{borderRadius: '50%'}}/>
             <div>
               <h1  
@@ -77,22 +56,18 @@ export default function Home() {
           <h1 className="text-2xl text-bold">Projects</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {data.projects.map((project) => (
-              <WorkCard
+            {ProjectData?.map((project) => {
+             return <ProjectCard
                 key={project.id}
-                img={project.imageSrc}
+                img={project.image}
                 name={project.title}
                 description={project.description}
                 onClick={() => window.open(project.url)}
               />
-            ))}
+            })}
           </div>
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
-          
-        </div>
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
           <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
