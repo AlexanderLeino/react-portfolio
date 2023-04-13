@@ -53,9 +53,9 @@ export default function Home() {
          
         </div>
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="text-2xl text-bold">Projects</h1>
+          <h1 className="text-5xl text-bold">Projects</h1>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          <div className="mt-5 laptop:mt-5 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {ProjectData?.map((project) => {
              return <ProjectCard
                 key={project.id}

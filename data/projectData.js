@@ -37,7 +37,7 @@ export const ProjectData = [
     deploy: "https://open-weather-react-app.herokuapp.com/",
     code: "https://github.com/AlexanderLeino/open-weather-react",
     repository: "https://github.com/AlexanderLeino/open-weather-react",
-    technologies: ["React", "Node", "Express", "React" ,'ChartJs', "Moment.js", "Styled Components"
+    technologies: ["React", "Node", "Express", "React" ,'ChartJs', "Moment.js", "Styled"
     ],
     image: weather,
     tags: ['frontEnd', 'all', 'fullStack']
