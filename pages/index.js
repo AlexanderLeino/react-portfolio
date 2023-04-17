@@ -4,18 +4,17 @@ import {ProjectData} from '../data/projectData'
 import Socials from "../components/Socials";
 import ProjectCard from "../components/ProjectCard";
 import profilePic from '../assets/profile-picture.jpg'
-
+import { HoverState } from "../components/Hover-State";
 import Footer from "../components/Footer";
 import Head from "next/head";
-
-
 // Local Data
 import data from "../data/portfolio.json";
+
 
 export default function Home() {
   return (
     <div>
-
+      <HoverState />
       <Head>
         <title>Alexander Leino's Portfolio</title>
       </Head>
@@ -69,10 +68,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
+        <div className="mt-10 laptop:mt-40 laptop:p-0">
+          <h1 className=" text-7xl text-bold">About Me.</h1>
+          <p className=" mt-2 text-xl laptop:text-3xl w-full">
+          I am a non-traditional Web Developer with 9 months of professional developer experience. I come from a background in finance and after leaving my role as a loan officer I decided to enroll in Trilogy's coding boot camp. Since then I have fallen in love with programming, because of the endless possibilities and solutions that one can create with just a computer. 
           </p>
         </div>
         <Footer />
