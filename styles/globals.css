@@ -28,10 +28,10 @@ body {
   );
 }
 .gradient-circle-bottom {
-  position: absolute;
+  position: relative;
   pointer-events: none;
   z-index: 100;
-  bottom: -20px;
+  bottom: 0px;
   height: 30px;
   width: 100vw;
   opacity: 0.5;

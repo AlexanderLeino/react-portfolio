@@ -13,6 +13,7 @@ import data from "../data/portfolio.json";
 
 export default function Home() {
   return (
+  <>
     <div>
       <HoverState />
       <Head>
@@ -20,7 +21,7 @@ export default function Home() {
       </Head>
 
       <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
+      
 
       <div className="container mx-auto mb-10">
       <Header />
@@ -62,7 +63,8 @@ export default function Home() {
                 name={project.title}
                 technologies={project.technologies}
                 description={project.description}
-                onClick={() => window.open(project.url)}
+                view={() => window.open(project.deploy)}
+                code={() => window.open(project.code)}
               />
             })}
           </div>
@@ -74,8 +76,11 @@ export default function Home() {
           I am a non-traditional Web Developer with 9 months of professional developer experience. I come from a background in finance and after leaving my role as a loan officer I decided to enroll in Trilogy's coding boot camp. Since then I have fallen in love with programming, because of the endless possibilities and solutions that one can create with just a computer. 
           </p>
         </div>
-        <Footer />
+       
       </div>
+      <div className="gradient-circle-bottom"></div>
     </div>
+      
+  </>
   );
 }
